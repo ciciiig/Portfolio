@@ -30,7 +30,7 @@ nav {
     border-radius: 25% 75% 75% 25% / 50% 50% 50% 50% ;
 }
 
-.carousel {
+.projects {
     grid-area: 3 / 2 / 4 / 3;
     border-radius: 50% 50% 50% 50% / 25% 25% 75% 75%;
 }
