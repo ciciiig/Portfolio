@@ -1,0 +1,36 @@
+body {
+    color: #fdfdff;
+    background: #6a5b6e;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    text-align: center;
+
+    margin: 0;
+    min-height: 100vh;
+
+}
+
+.projects-container {
+    border: solid red;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 25rem));
+    justify-content: center;
+    justify-items: center;
+    grid-gap: 30px;
+
+}
+
+.card-container {
+    border: solid;
+    padding: 5px;
+    background: #433946;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.screenshot {
+    max-width: 100%;
+    height: auto;
+}
