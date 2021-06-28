@@ -7,25 +7,81 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 
-    <link rel="stylesheet" href="./index.css">
     <title>Welcome to GYO's</title>
 </head>
 
 <body>
-    <nav>
-        <a class="whyMe" href="./pages/whyMe.html">WHY ME</a>
+    <!-- dark mode switch code below -->
+    <div class="there-switch-wrapper">
+        <span id="toggle-icon">
+            <span class="toggle-text">Light Mode</span>
+        </span>
+        <label class="theme-switch">
+            <input type="checkbox">
+            <div class="slider round"></div>
+        </label>
+    </div>
+    <!-- dark mode switch code above -->
+
+    <div class='menu'>
+        <a class="resume" href="">RESUME</a>
         <!-- website design survey explained: https://www.seoptimer.com/blog/website-design-questionnaire/ -->
         <a class="order"
-            href="https://us4.list-manage.com/survey?u=8a67a5ecaaa760b81aaf1a2ff&id=d64b748238&attribution=false">MAKE
-            AN<br>ORDER</a>
-        <a class="contact" href="./pages/contact.html">CONTACT</a>
-        <a class="projects" href="./pages/projects/projects.html">PROJECTS</a>
+            href="https://us4.list-manage.com/survey?u=8a67a5ecaaa760b81aaf1a2ff&id=d64b748238&attribution=false">
+            MAKE AN<br>ORDER</a>
+        <a class="contact" href="#nav-contact">CONTACT</a>
+        <a class="projects" href="#nav-projects">PROJECTS</a>
         <div class="switch">
             <p class="gyo"> I Am<br>GYO </p>
             <img class="gyoPic" src="./images/profile.jpg" alt="Gyo's profile picture">
         </div>
+    </div>
+
+    <nav class="nav" id="nav">
+        <a href="#">HOME</a>
+        <a href="">RESUME</a>
+        <a href="https://us4.list-manage.com/survey?u=8a67a5ecaaa760b81aaf1a2ff&id=d64b748238&attribution=false">
+            ORDER</a>
+        <a href="#nav-projects">PROJECTS</a>
+        <a href="#nav-contact">CONTACT</a>
     </nav>
+
+    <section id="nav-projects">
+        <h1 class="around-cards-container">PROJECTS</h1>
+        <div class="cards-container" id="cards-container">
+            <!-- Project Quote Generator-->
+            <div class="card-container" id="card-container">
+                <img class="screenshot" id="screenshot"
+                    src="./pages/projects/projectimg/quote-generator-screenshot.jpg">
+                <h2>Quote Generator</h2>
+                <p>Fetch, Async/Await, Quote API</p>
+                <a href="https://ciciiig.github.io/js-projects/quote-generator-En/" target="_blank">
+                    <!-- view project button -->
+                    <button class="pushable">
+                        <span class="shadow"></span>
+                        <span class="front">
+                            VIEW PROJECT
+                        </span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <button class="pushable">
+            <span class="shadow"></span>
+            <span class="front">
+                ALL PROJECTS
+            </span>
+        </button>
+    </section>
+
+    <section id="nav-contact">
+        <h1>CONTACT</h1>
+    </section>
+
+    <!-- script -->
+    <script src="script.js"></script>
 </body>
 
 </html>
