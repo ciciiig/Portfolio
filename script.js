@@ -1,9 +1,11 @@
 // When the user scrolls below home, show the navbar. Code below
 const nav = document.getElementById("nav");
 var prevScrollpos = window.pageYOffset;
+nav.style.visibility = 'hidden';
+
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos + 250 < window.innerHeight) {
+    if (prevScrollpos + 300 < window.innerHeight) {
         nav.style.visibility = 'hidden';
         nav.style.opacity = 0;
         nav.style.transition = 'visibility 0s linear 600ms, opacity 600ms';
