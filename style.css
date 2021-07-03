@@ -33,7 +33,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* whole page navigation which appears after home section below */
+/* navigation which appears after home section below */
 .nav {    
     z-index: 10; 
     position: -webkit-sticky; /* Safari */
@@ -54,7 +54,66 @@ body {
     color: var(--on-background);
     border-bottom: 3px solid
 }
-/* whole page navigation which appears after home section above */
+/* navigation which appears after home section above */
+
+/* home section navigation below */
+.menu {
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+.resume {
+  grid-area: 1 / 2 / 2 / 3;
+  border-radius: 50% 50% 50% 50% / 75% 75% 25% 25%;
+}
+.order {
+  grid-area: 2 / 1 / 3 / 2;
+  border-radius: 75% 25% 25% 75% / 50% 50% 50% 50% ;
+}
+.contact {
+  grid-area: 2 / 3 / 3 / 4;
+  border-radius: 25% 75% 75% 25% / 50% 50% 50% 50% ;
+}
+.projects {
+  grid-area: 3 / 2 / 4 / 3;
+  border-radius: 50% 50% 50% 50% / 25% 25% 75% 75%;
+}
+.mid {
+  grid-area: 2 / 2 / 3 / 3;
+  border-radius: 30% 30% 30% 30% / 30% 30% 30% 30%;
+}
+
+.resume, .order, .contact, .projects, .mid {
+  height: 100px;
+  width: 100px;
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  border: solid var(--secondary-color);
+  animation: out 0.5s;
+  box-shadow: var(--box-shadow);
+}
+.resume:hover, .order:hover, .contact:hover, .projects:hover {
+animation: in 0.5s forwards;
+cursor: pointer;
+}
+.resume:active, .order:active, .contact:active, .projects:active {
+filter: brightness(110%);
+}
+@keyframes in {
+  from {background: none; transform: scale(1);}
+  to {background: var(--secondary-color); transform: scale(1.1);}
+}
+@keyframes out {
+  0% {background: var(--secondary-color); transform: scale(1.1);}
+  100% {background: none; transform: scale(1);}
+}
+/* home section navigation above */
 
 section {
     min-height: 100vh;
@@ -64,6 +123,7 @@ section {
     flex-direction: column;
 }
 
+/* projects section code below */
 .cards-container {
     display: flex;
     justify-content: center;
@@ -82,91 +142,20 @@ section {
     color: var(--on-background-alt);
     box-shadow: var(--box-shadow);
   }
+/* projects section code above */
 
-/* home section navigation below */
-.menu {
-    height: 100vh;
-    display: grid;
-    justify-content: center;
-    align-content: center;
+/* contact section code below */
+.fab, .fas {
+  font-size: 100px;
+  cursor: pointer;
+  margin-right: 25px;
+  color: var(--primary-color);
+  text-decoration: none;
 }
-.resume {
-    grid-area: 1 / 2 / 2 / 3;
-    border-radius: 50% 50% 50% 50% / 75% 75% 25% 25%;
+.fab:hover, .fas:hover {
+  color: var(--on-background);
 }
-.order {
-    grid-area: 2 / 1 / 3 / 2;
-    border-radius: 75% 25% 25% 75% / 50% 50% 50% 50% ;
-}
-.contact {
-    grid-area: 2 / 3 / 3 / 4;
-    border-radius: 25% 75% 75% 25% / 50% 50% 50% 50% ;
-}
-.projects {
-    grid-area: 3 / 2 / 4 / 3;
-    border-radius: 50% 50% 50% 50% / 25% 25% 75% 75%;
-}
-.switch, .gyo, .gyoPic {
-    grid-area: 2 / 2 / 3 / 3;
-    border-radius: 30% 30% 30% 30% / 30% 30% 30% 30%;
-}
-.gyoPic {
-    display: none;
-    opacity: 20%;
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    margin: 5px;
-    border: solid var(--secondary-color);
-}
-.gyoPic:hover {
-    cursor: pointer;
-    opacity: 100%;
-    transform: scale(1.2);
-    transition: opacity 1s, transform 0.5s;
-}
-.gyo {
-    height: 100px;
-    width: 100px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-    border: solid var(--secondary-color);
-}
-.resume, .order, .contact, .projects {
-    height: 100px;
-    width: 100px;
-    text-decoration: none;
-    text-align: center;
-    color: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-    border: solid var(--secondary-color);
-    animation: out 0.5s;
-}
-.switch:hover .gyo {
-    display: none;
-}
-.switch:hover .gyoPic {
-    display: block;
-}
-.resume:hover, .order:hover, .contact:hover, .projects:hover {
-    animation: in 0.5s forwards;
-    cursor: pointer;
-}
-@keyframes in {
-    from {background: none; transform: scale(1);}
-    to {background: var(--secondary-color); transform: scale(1.1);}
-}
-@keyframes out {
-    0% {background: var(--secondary-color); transform: scale(1.1);}
-    100% {background: none; transform: scale(1);}
-}
-/* home section navigation above */
+/* contact section code above */
 
 /* button code bellow */
 .pushable {
