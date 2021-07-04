@@ -35,7 +35,7 @@ body {
 display: flex;
 align-items: center;
 z-index: 100;
-position: fixed;
+position:fixed;
 right: 25px;
 top: 30px;
 }
@@ -172,9 +172,11 @@ section {
 /* Projects section code below */
 .cards-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
+  border: solid red;
 }
 .card-container {
   text-align: center;
