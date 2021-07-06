@@ -139,23 +139,23 @@ to {background: var(--secondary-color); transform: scale(1.1);}
 }
 /* home section navigation above */
 /* navigation which appears after home section. code below */
-.nav {    
+.navbar {    
   z-index: 10; 
   position: -webkit-sticky; /* Safari */
   position: sticky;
   letter-spacing: 1px;
   padding: 30px;
-  background-color: rgb(245, 245, 245 / 50%);
+  background-color: var(--on-background);
 }
-.nav > *  {
+.navbar > *  {
   margin-right: 2vh;
   color: var(--primary-color);
   font-weight: bold;
   text-decoration: none;
   border-bottom: 3px solid transparent;
 }
-.nav>*:hover,
-.nav>*:focus {
+.navbar>*:hover,
+.navbar>*:focus {
   color: var(--on-background);
   border-bottom: 3px solid
 }
@@ -176,7 +176,6 @@ section {
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
-  border: solid red;
 }
 .card-container {
   text-align: center;
