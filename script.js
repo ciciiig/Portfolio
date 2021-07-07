@@ -1,24 +1,29 @@
-// When the user scrolls below home, show the navbar. Code below
+// When the user scrolls below home, show the navbar or hamburger is media query is active. Code below
 const nav = document.getElementById("navbar");
+const hamburger = document.getElementById("hamburger-wrapper");
 var prevScrollpos = window.pageYOffset;
 nav.style.visibility = 'hidden';
 
-window.onscroll = function () {
+function showAfterHome(elem) {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos < window.innerHeight) {
-        nav.style.visibility = 'hidden';
-        nav.style.opacity = 0;
-        nav.style.transition = 'visibility 0s linear 600ms, opacity 600ms';
+        elem.style.visibility = 'hidden';
+        elem.style.opacity = 0;
+        elem.style.transition = 'visibility 0s linear 600ms, opacity 600ms';
     } else {
-        nav.style.top = "0";
-        nav.style.visibility = 'visible';
-        nav.style.opacity = 1;
-        nav.style.transition = 'visibility 0s linear 0s, opacity 600ms';
+        elem.style.top = "0";
+        elem.style.visibility = 'visible';
+        elem.style.opacity = 1;
+        elem.style.transition = 'visibility 0s linear 0s, opacity 600ms';
     }
     prevScrollpos = currentScrollPos;
 }
-// When the user scrolls below home, show the navbar. Code above
 
+window.onscroll = function() {
+    showAfterHome(nav);
+    showAfterHome(hamburger);
+  }
+// When the user scrolls below home, show the navbar or hamburger is media query is active. Code above
 // Toggle dark mode code below
 const toggleSwitch = document.querySelector('input[type="checkbox"]');
 

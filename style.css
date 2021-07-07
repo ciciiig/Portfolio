@@ -16,7 +16,7 @@
   --secondary-color: #03dac5;
   --on-primary: #000;
   --background: #121212;
-  --on-background: rgba(245, 245, 245, 0.9);
+  --on-background: rgb(245, 245, 245);
   --on-background-alt: rgba(255, 255, 255, 0.7);
 }
 html {
@@ -37,7 +37,8 @@ align-items: center;
 z-index: 100;
 position:fixed;
 right: 25px;
-top: 30px;
+top: 13px;
+width: -100%;
 }
 .theme-switch {
 display: inline-block;
@@ -144,8 +145,8 @@ to {background: var(--secondary-color); transform: scale(1.1);}
   position: -webkit-sticky; /* Safari */
   position: sticky;
   letter-spacing: 1px;
-  padding: 30px;
-  background-color: var(--on-background);
+  padding: 20px;
+  background-color: var(--on-background-alt);
 }
 .navbar > *  {
   margin-right: 2vh;
@@ -156,7 +157,7 @@ to {background: var(--secondary-color); transform: scale(1.1);}
 }
 .navbar>*:hover,
 .navbar>*:focus {
-  color: var(--on-background);
+  color: var(--on-background-alt);
   border-bottom: 3px solid
 }
 /* navigation which appears after home section. Code above */
@@ -274,3 +275,30 @@ color: var(--on-background);
   outline: none;
 }
 /* button code above */
+/* media query for smartphone. Code below */
+@media screen and (max-width: 600px) {
+  .navbar {
+    display: none;
+  }
+  .theme-switch-wrapper {
+    position: absolute;
+  }
+  /* hamburger menu icon which appears only on mobile device. Code below */
+  .hamburger-wrapper {
+    z-index: 10; 
+    position: fixed;
+    left: 25px;
+    top: 13px;
+    background-color: var(--on-background-alt);
+    width: 100%;
+    visibility: hidden;
+  }
+  .hamburger {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 5px 0;
+  }
+  /* hamburger menu icon which appears only on mobile device. Code above */
+}
+/* media quary for navbar. Code above */
