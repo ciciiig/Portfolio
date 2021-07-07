@@ -191,6 +191,10 @@ section {
 }
 /* projects section code above */
 /* contact section code below */
+.social-icons {
+  display: grid;
+  
+}
 .fab, .fas {
 font-size: 100px;
 cursor: pointer;
