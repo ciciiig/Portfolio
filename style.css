@@ -173,12 +173,17 @@ section {
 }
 /* All the sections of the site. Code above */
 /* Projects section code below */
+img {
+  max-width: 100%;
+  height: auto;
+}
 .cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
+  width: 95%;
 }
 .card-container {
   text-align: center;
