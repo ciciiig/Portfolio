@@ -295,7 +295,6 @@ color: var(--on-background);
     position: fixed;
     left: 25px;
     top: 13px;
-    width: 100%;
     visibility: hidden;
   }
   .hamburger {
