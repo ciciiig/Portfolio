@@ -118,7 +118,6 @@ color: inherit;
 display: flex;
 justify-content: center;
 align-items: center;
-margin: 5px;
 border: solid var(--secondary-color);
 animation: out 0.5s;
 box-shadow: var(--box-shadow);
