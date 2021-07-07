@@ -85,6 +85,7 @@ border-radius: 50%;
 /* home section navigation. Code below */
 .menu {
 height: 100vh;
+width: 100vw;
 display: grid;
 justify-content: center;
 align-content: center;
@@ -182,7 +183,6 @@ img {
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
-  width: 95%;
 }
 .card-container {
   text-align: center;
