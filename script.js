@@ -2,7 +2,6 @@
 const nav = document.getElementById("navbar");
 const hamburger = document.getElementById("hamburger-wrapper");
 var prevScrollpos = window.pageYOffset;
-nav.style.visibility = 'hidden';
 
 function showAfterHome(elem) {
     var currentScrollPos = window.pageYOffset;
@@ -18,7 +17,6 @@ function showAfterHome(elem) {
     }
     prevScrollpos = currentScrollPos;
 }
-
 window.onscroll = function() {
     showAfterHome(nav);
     showAfterHome(hamburger);

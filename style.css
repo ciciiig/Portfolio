@@ -147,6 +147,7 @@ to {background: var(--secondary-color); transform: scale(1.1);}
   letter-spacing: 1px;
   padding: 20px;
   background-color: var(--on-background-alt);
+  visibility: hidden;
 }
 .navbar > *  {
   margin-right: 2vh;
@@ -168,6 +169,7 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 /* All the sections of the site. Code above */
 /* Projects section code below */
@@ -191,10 +193,6 @@ section {
 }
 /* projects section code above */
 /* contact section code below */
-.social-icons {
-  display: grid;
-  
-}
 .fab, .fas {
 font-size: 100px;
 cursor: pointer;
@@ -293,15 +291,17 @@ color: var(--on-background);
     position: fixed;
     left: 25px;
     top: 13px;
-    background-color: var(--on-background-alt);
     width: 100%;
     visibility: hidden;
   }
   .hamburger {
     width: 35px;
     height: 5px;
-    background-color: black;
+    background-color: var(--on-background);
     margin: 5px 0;
+  }
+  .social-icons {
+    display: grid;
   }
   /* hamburger menu icon which appears only on mobile device. Code above */
 }
