@@ -27,23 +27,23 @@ const toggleSwitch = document.querySelector('input[type="checkbox"]');
 
 function switchTheme(event) {
     if (event.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light')        
+    } else {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark')
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light')
     }
 }
-
 toggleSwitch.addEventListener('change', switchTheme)
-// Toggle dark mode code above
-
-// check local storage for theme color
+// check local storage for theme color. Code below
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
 
-    if (currentTheme === 'dark') {
+    if (currentTheme === 'light') {
         toggleSwitch.checked = true;
     }
 }
+// check local storage for theme color. Code above
+// Toggle dark mode code above
+
