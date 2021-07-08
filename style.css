@@ -85,7 +85,6 @@ border-radius: 50%;
 /* home section navigation. Code below */
 .menu {
 height: 100vh;
-width: 100vw;
 display: grid;
 justify-content: center;
 align-content: center;
