@@ -1,0 +1,140 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b382ffc846.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>George Tsintsadze</title>
+</head>
+
+<body>
+    <!-- hamburger menu icon which appears only on mobile device. Code below -->
+    <a href="#">
+        <div class="hamburger-wrapper" id="hamburger-wrapper">
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+            <div class="hamburger"></div>
+        </div>
+    </a>
+    <!-- hamburger menu icon which appears only on mobile device. Code above -->
+    <!-- dark mode switch code below -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch">
+            <input type="checkbox">
+            <div class="slider round"></div>
+        </label>
+    </div>
+    <!-- dark mode switch code above -->
+    <!-- home section navigation below -->
+    <div class='menu'>
+        <a class="resume" href="https://drive.google.com/file/d/1BIO-BfFijrpn8GAevjj7qxFZXASFRCiB/view?usp=sharing"
+            target="_blank" rel="noopener noreferrer">RESUME</a>
+        <!-- website design survey explained: https://www.seoptimer.com/blog/website-design-questionnaire/ -->
+        <a class="order"
+            href="https://us4.list-manage.com/survey?u=8a67a5ecaaa760b81aaf1a2ff&id=d64b748238&attribution=false"
+            target="_blank" rel="noopener noreferrer">
+            MAKE AN<br>ORDER</a>
+        <a class="contact" href="#nav-contact">CONTACT</a>
+        <a class="projects" href="#nav-projects">PROJECTS</a>
+        <!-- <div class="mid">
+            <p class="george"> I AM<br>GEORGE</p>
+        </div> -->
+    </div>
+    <!-- home section navigation above -->
+    <!-- navigation which appears after home section. Code below -->
+    <nav class="navbar" id="navbar">
+        <a href="#">HOME</a>
+        <a href="https://drive.google.com/file/d/1BIO-BfFijrpn8GAevjj7qxFZXASFRCiB/view?usp=sharing" target="_blank"
+            rel="noopener noreferrer">RESUME</a>
+        <a href="https://us4.list-manage.com/survey?u=8a67a5ecaaa760b81aaf1a2ff&id=d64b748238&attribution=false"
+            target="_blank" rel="noopener noreferrer">
+            ORDER</a>
+        <a href="#nav-projects">PROJECTS</a>
+        <a href="#nav-contact">CONTACT</a>
+    </nav>
+    <!-- navigation which appears after home section. Code above -->
+    <!-- Projects section. Code below -->
+    <section id="nav-projects">
+        <h1>PROJECTS</h1>
+        <div class="cards-container" id="cards-container">
+            <!-- Project Quote Generator-->
+            <div class="card-container" id="card-container">
+                <img src="./pages/projects/projectimg/quote-generator.jpg">
+                <h2>Quote Generator</h2>
+                <p>Fetch, Async/Await, Quote API</p>
+                <a href="https://ciciiig.github.io/js-projects/quote-generator-En/" target="_blank"
+                    rel="noopener noreferrer">
+                    <!-- view project button -->
+                    <button class="pushable">
+                        <span class="shadow"></span>
+                        <span class="front">
+                            VIEW PROJECT
+                        </span>
+                    </button>
+                </a>
+            </div>
+            <!-- Project Animated Template -->
+            <div class="card-container" id="card-container">
+                <img src="./pages/projects/projectimg/animated-template.jpg">
+                <h2>Animated Template</h2>
+                <p>Templates, Animated Libraries</p>
+                <a href="https://ciciiig.github.io/js-projects/animated-template" target="_blank"
+                    rel="noopener noreferrer">
+                    <!-- view project button -->
+                    <button class="pushable">
+                        <span class="shadow"></span>
+                        <span class="front">
+                            VIEW PROJECT
+                        </span>
+                    </button>
+                </a>
+            </div>
+            <!-- Project Music Player-->
+            <div class="card-container" id="card-container">
+                <img src="./pages/projects/projectimg/music-player.jpg">
+                <h2>Music Player</h2>
+                <p>HTML5 Audio API</p>
+                <a href="https://ciciiig.github.io/js-projects/music-player" target="_blank">
+                    <!-- view project button -->
+                    <button class="pushable">
+                        <span class="shadow"></span>
+                        <span class="front">
+                            VIEW PROJECT
+                        </span>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <!-- Button to view all projects. Code below -->
+        <button class="pushable">
+            <span class="shadow"></span>
+            <span class="front allProjectsButton">
+                ALL PROJECTS
+            </span>
+        </button>
+        <!-- Button to view all projects. Code above -->
+    </section>
+    <!-- Projects section. Code above -->
+    <!-- Contacts section. Code below -->
+    <section id="nav-contact">
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/george-tsintsadze/" target="_blank" rel="noopener noreferrer"
+                title="linkedin">
+                <i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ciciiig" target="_blank" rel="noopener noreferrer" title="github"><i
+                    class="fab fa-github-square"></i></a>
+            <a href="mailto:tsintsadze7@gmail.com" target="_blank" rel="noopener noreferrer"
+                title="tsintsadze7@gmail.com"><i class="fas fa-envelope-square"></i></a>
+            <a href="tel:+995 555 965 569" title="Tel: +995 555 965 569"><i class="fas fa-phone-square"></i></a>
+        </div>
+    </section>
+    <!-- Contacts section. Code above -->
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

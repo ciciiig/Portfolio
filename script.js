@@ -1,27 +1,43 @@
-// When the user scrolls below home, show the navbar or hamburger is media query is active. Code below
-const nav = document.getElementById("navbar");
-const hamburger = document.getElementById("hamburger-wrapper");
-var prevScrollpos = window.pageYOffset;
+const menuBars = document.getElementById('menu-bars');
+const overlay = document.getElementById('overlay');
+const nav1 = document.getElementById('nav-1');
+const nav2 = document.getElementById('nav-2');
+const nav3 = document.getElementById('nav-3');
+const nav4 = document.getElementById('nav-4');
+const nav5 = document.getElementById('nav-5');
+const navItems = [nav1, nav2, nav3, nav4, nav5];
 
-function showAfterHome(elem) {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos < window.innerHeight) {
-        elem.style.visibility = 'hidden';
-        elem.style.opacity = 0;
-        elem.style.transition = 'visibility 0s linear 600ms, opacity 600ms';
-    } else {
-        elem.style.top = "0";
-        elem.style.visibility = 'visible';
-        elem.style.opacity = 1;
-        elem.style.transition = 'visibility 0s linear 0s, opacity 600ms';
-    }
-    prevScrollpos = currentScrollPos;
+// Control Navigation Animation
+function navAnimation(direction1, direction2) {
+  navItems.forEach((nav, i) => {
+    nav.classList.replace(`slide-${direction1}-${i + 1}`, `slide-${direction2}-${i + 1}`);
+  });
 }
-window.onscroll = function() {
-    showAfterHome(nav);
-    showAfterHome(hamburger);
+
+function toggleNav() {
+  // Toggle: Menu Bars Open/Closed
+  menuBars.classList.toggle('change');
+  // Toggle: Menu Active
+  overlay.classList.toggle('overlay-active');
+  if (overlay.classList.contains('overlay-active')) {
+    // Animate In - Overlay
+    overlay.classList.replace('overlay-slide-left', 'overlay-slide-right');
+    // Animate In - Nav Items
+    navAnimation('out', 'in');
+  } else {
+    // Animate Out - Overlay
+    overlay.classList.replace('overlay-slide-right', 'overlay-slide-left');
+    // Animate Out - Nav Items
+    navAnimation('in', 'out');
   }
-// When the user scrolls below home, show the navbar or hamburger is media query is active. Code above
+}
+
+// Event Listeners
+menuBars.addEventListener('click', toggleNav);
+navItems.forEach((nav) => {
+  nav.addEventListener('click', toggleNav);
+});
+
 // Toggle dark mode code below
 const toggleSwitch = document.querySelector('input[type="checkbox"]');
 
@@ -46,4 +62,3 @@ if (currentTheme) {
 }
 // check local storage for theme color. Code above
 // Toggle dark mode code above
-
