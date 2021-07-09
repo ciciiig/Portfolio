@@ -308,9 +308,10 @@ section.home .line {
   width: 25%;
   height: 0.5px;
   border: 6px solid;
+  border-radius: 10px;
 }
 section.home p.small-text {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   line-height: 100%;
   width: 50%;
   padding: 2% 0;
