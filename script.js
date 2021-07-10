@@ -62,3 +62,24 @@ if (currentTheme) {
 }
 // check local storage for theme color. Code above
 // Toggle dark mode code above
+
+// Google map. Code below
+// Initialize and add the map
+function initMap() {
+  const Tbilisi = { lat: 41.714, lng: 44.763 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 5,
+    center: Tbilisi,
+    mapId: 'a8d2a358f1e36bad',
+    mapTypeControl: false,
+    fullscreenControl: false,
+    zoomControl: false,
+    streetViewControl: false,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: Tbilisi,
+    map: map,
+  });
+}
+// Google map. Code above
