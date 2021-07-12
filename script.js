@@ -63,6 +63,22 @@ if (currentTheme) {
 // check local storage for theme color. Code above
 // Toggle dark mode code above
 
+// Collapsible section. Code below
+let coll = document.getElementsByClassName("collapsible");
+let i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    let content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+// Collapsible section. Code above
+
 // Google map. Code below
 // Initialize and add the map
 function initMap() {

@@ -410,30 +410,42 @@ transition:
   600ms
   cubic-bezier(.3, .7, .4, 1);
 }
-.allProjectsButton {
-font-size: 1.3rem;
-padding: 10px 18px;
+/* collapsible section. Code below */
+.allProjectsButtonStyle {
+  font-size: 1.3rem;
+  padding: 10px 18px;
 }
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+/* collapsible section. Code above */
 .pushable:hover {
-filter: brightness(120%);
+  filter: brightness(120%);
 }
 .pushable:hover .front {
-transform: translateY(-4px);
-transition:
-  transform
-  250ms
-  cubic-bezier(.3, .7, .4, 1.5);
+  transform: translateY(-4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
 }
 .pushable:active .front {
-transform: translateY(-2px);
-transition: transform 34ms;
+  transform: translateY(-2px);
+  transition: transform 34ms;
 }
 .pushable:hover .shadow {
-transform: translateY(2px);
-transition:
-  transform
-  250ms
-  cubic-bezier(.3, .7, .4, 1.5);
+  transform: translateY(2px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
 }
 .pushable:active .shadow {
   transform: translateY(1px);
