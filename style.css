@@ -149,6 +149,7 @@ nav li a::before {
 content: "";
 width: 25vw;
 height: 3px;
+border-radius: 3px;
 background-color: var(--on-background);
 position: absolute;
 top: 47.5%;
@@ -306,15 +307,19 @@ section.home p {
 }
 section.home .line {
   width: 25%;
-  height: 0.5px;
-  border: 6px solid;
-  border-radius: 10px;
+  border: 3px var(--on-background) solid;
+  border-radius: 3px;
+  background-color: var(--on-background);
 }
 section.home p.small-text {
   font-size: 1.1rem;
   line-height: 100%;
   width: 50%;
   padding: 2% 0;
+}
+
+p.small-text {
+  color: var(--on-background);
 }
 /* Home section. Code above */
 
